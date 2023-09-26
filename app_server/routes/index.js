@@ -14,5 +14,7 @@ router.get('/location/review/new2',ctrlLocations.addReview2);
 router.get('/location/review/new3',ctrlLocations.addReview3);
 
 router.get('/about',ctrlOthers.about);
+router.get('/signin',ctrlOthers.signin);
+router.get('/register',ctrlOthers.register);
 
 module.exports = router;

@@ -1,33 +1,15 @@
 module.exports.homelist = function(req, res) {
+    renderHomepage(req, res);
+};
+
+var renderHomepage = function(req, res){
     res.render('locations-list', {
         title: 'Loc8r - find a place to work with wifi',
         pageHeader: {
             title: 'Loc8r',
             strapline: 'Find places to work with wifi near you!'
         },
-        sidebar: "Looking for wifi and a seat? Loc8r helps you find places to work when out and about. Perhaps with coffee, cake or a pint? Let Loc8r help you find the place you're looking for.",
-        locations: [{
-            name: 'Amaravathi',
-            address: '125 High Street, Reading, RG6 1PS',
-            rating: 3,
-            facilities: ['Hot drinks', 'Food', 'Premium wifi'],
-            distance: '100m',
-            href: '/location'
-        }, {
-            name: 'Gismat',
-            address: '125 High Street, Reading, RG6 1PS',
-            rating: 4,
-            facilities: ['Hot drinks', 'Food', 'Premium wifi'],
-            distance: '200m',
-            href: '/location2'
-        }, {
-            name: 'Tree Stories Cafe',
-            address: '125 High Street, Reading, RG6 1PS',
-            rating: 2,
-            facilities: ['Food', 'Premium wifi'],
-            distance: '250m',
-            href: '/location3'
-        }]
+        sidebar: "Looking for wifi and a seat? Loc8r helps you find places to work when out and about. Perhaps with coffee, cake or a pint? Let Loc8r help you find the place you're looking for."
     });
 };
 

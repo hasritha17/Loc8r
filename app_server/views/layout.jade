@@ -1,5 +1,5 @@
 doctype html
-html
+html(ng-app='loc8rApp')
   head
     meta(name='viewport',content='width=device-width, initial-scale=1.0')
     title= title
@@ -17,6 +17,8 @@ html
         #navbar-main.navbar-collapse.collapse
           ul.nav.navbar-nav
             li
+              a(href='/signin') Sign In
+            li
               a(href='/about/') About
     .container
       block content
@@ -24,5 +26,8 @@ html
         .row
           .col-xs-12
             small &copy; Hasritha Reddy 2023
+    script(src = '/angular/angular.min.js')
+    script(src = '/angular/loc8rApp.js')
     script(src = '/javascripts/jquery-1.11.1.min.js')
     script(src = '/bootstrap/js/bootstrap.min.js')
+
